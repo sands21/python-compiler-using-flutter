@@ -1,19 +1,8 @@
 {
-  "buildCommand": "flutter build web",
-  "outputDirectory": "build/web",
+  "framework": "flutter",
   "functions": {
     "api/execute.py": {
-      "runtime": "python3.9"
+      "runtime": "@vercel/python"
     }
-  },
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  }
 }
