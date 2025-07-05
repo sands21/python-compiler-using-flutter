@@ -1,5 +1,6 @@
 {
-  "framework": "flutter",
+  "buildCommand": "flutter build web",
+  "outputDirectory": "build/web",
   "functions": {
     "api/execute.py": {
       "runtime": "@vercel/python"
