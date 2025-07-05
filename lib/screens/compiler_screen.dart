@@ -15,9 +15,24 @@ class PythonCompilerScreen extends StatelessWidget {
         actions: [
           Consumer<PythonCompilerProvider>(
             builder: (context, provider, child) {
-              return IconButton(
-                icon: const Icon(Icons.clear_all),
-                onPressed: provider.clearHistory,
+              return Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: Icon(provider.isDarkMode
+                        ? Icons.light_mode
+                        : Icons.dark_mode),
+                    onPressed: provider.toggleTheme,
+                    tooltip: provider.isDarkMode
+                        ? 'Switch to Light Mode'
+                        : 'Switch to Dark Mode',
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.clear_all),
+                    onPressed: provider.clearHistory,
+                    tooltip: 'Clear History',
+                  ),
+                ],
               );
             },
           ),
@@ -37,7 +52,8 @@ class PythonCompilerScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ElevatedButton(
-                      onPressed: provider.isLoading ? null : provider.executeCode,
+                      onPressed:
+                          provider.isLoading ? null : provider.executeCode,
                       child: provider.isLoading
                           ? const CircularProgressIndicator()
                           : const Text('Run Code'),
@@ -45,7 +61,12 @@ class PythonCompilerScreen extends StatelessWidget {
                     ElevatedButton(
                       onPressed: provider.clearCodeInput,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red.shade100,
+                        backgroundColor: provider.isDarkMode
+                            ? Colors.red[800]
+                            : Colors.red.shade100,
+                        foregroundColor: provider.isDarkMode
+                            ? Colors.red[100]
+                            : Colors.red[800],
                       ),
                       child: const Text('Clear'),
                     ),
