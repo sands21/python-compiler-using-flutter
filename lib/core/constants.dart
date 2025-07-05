@@ -1,6 +1,6 @@
 class AppConstants {
   // Backend API configuration
-  static const String backendBaseUrl = 'http://10.0.2.2:5000';
+  static const String backendBaseUrl = 'http://localhost:5000';
   static const String executionEndpoint = '$backendBaseUrl/execute';
 
   // Error messages
