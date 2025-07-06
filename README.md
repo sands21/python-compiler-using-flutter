@@ -175,6 +175,7 @@ Key configurations in the Flutter app:
 
 - **API Endpoint**: Configure in `lib/services/python_execution_service.dart`
 - **Theme Settings**: Managed in `lib/providers/provider.dart`
+
 ```
 
 ## 🧪 Development
@@ -195,17 +196,6 @@ Key configurations in the Flutter app:
 3. **State Management**: Update `lib/providers/provider.dart`
 4. **Models**: Define in `lib/models/`
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🆘 Support
 
