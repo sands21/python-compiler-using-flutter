@@ -1,2 +1,0 @@
-# No external dependencies needed for the Vercel serverless function
-# Using only built-in Python modules: sys, io, contextlib, http.server, json 
